@@ -9,4 +9,13 @@ RSpec.describe Food, type: :model do
       expect(@food).to_not be_valid
     end
   end
+
+  context 'when description is nil' do
+    before do
+      @food = Food.create(name: 'name', price: 50)
+    end
+    it 'should not be valid' do
+      expect(@food).to_not be_valid
+    end
+  end
 end
