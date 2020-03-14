@@ -36,7 +36,7 @@ group :development, :test do
   # Use RSpec for testing frameworks
   gem 'rspec', '~> 3.9.0'
   # Use RSpec Rails for generating rails hooks
-  gem 'rspec-rails', '~> 3.9.1'
+  gem 'rspec-rails', '~> 4.0.0.rc1'
 end
 
 group :development do
