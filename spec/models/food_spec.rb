@@ -1,0 +1,12 @@
+require 'rails_helper'
+
+RSpec.describe Food, type: :model do
+  context 'when name is nil' do
+    before do
+      @food = Food.create(description: 'desc', price: 50)
+    end
+    it 'should not be valid' do
+      expect(@food).to_not be_valid
+    end
+  end
+end
