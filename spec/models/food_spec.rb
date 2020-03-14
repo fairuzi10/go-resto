@@ -10,6 +10,15 @@ RSpec.describe Food, type: :model do
     end
   end
 
+  context 'when length of name is less than 3' do
+    before do
+      @food = Food.create(name: 'ab', description: 'desc', price: 50)
+    end
+    it 'should not be valid' do
+      expect(@food).to_not be_valid
+    end
+  end
+
   context 'when description is nil' do
     before do
       @food = Food.create(name: 'name', price: 50)
