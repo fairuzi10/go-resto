@@ -27,4 +27,13 @@ RSpec.describe Food, type: :model do
       expect(@food).to_not be_valid
     end
   end
+
+  context 'if price is not number' do
+    before do
+      @food = Food.create(name: 'name', description: 'desc', price: 'yuhu')
+    end
+    it 'should not be valid' do
+      expect(@food).to_not be_valid
+    end
+  end
 end
