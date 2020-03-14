@@ -33,6 +33,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code
   # to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Use RSpec for testing frameworks
+  gem 'rspec', '~> 3.9.0'
+  # Use RSpec Rails for generating rails hooks
+  gem 'rspec-rails', '~> 3.9.1'
 end
 
 group :development do
